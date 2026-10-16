@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Foreground service notification -->
+    <string name="mcp_notification_channel_name">MCP-сервер</string>
+    <string name="mcp_notification_title">MCP-сервер працює</string>
+    <string name="mcp_notification_text">Слухає 127.0.0.1:%1$d</string>
+    <string name="mcp_notification_stop">Зупинити</string>
+    <string name="mcp_error_port_in_use">Не вдалося відкрити порт %1$d. Можливо, він уже зайнятий?</string>
+    <string name="mcp_error_invalid_settings">Некоректні налаштування MCP-сервера.</string>
+
+    <!-- Settings screen -->
+    <string name="mcp_settings_title">MCP-сервер</string>
+    <string name="mcp_settings_summary">Дозволити ШІ-асистенту читати й змінювати ваші ліки</string>
+    <string name="mcp_warning">Коли функцію ввімкнено, будь-хто, хто знає URL конектора, може читати й змінювати ваші ліки. Дані, які ви просите в асистента, обробляє Anthropic, і вони проходять через вашого провайдера тунелю. Якщо URL витік, створіть новий секрет.</string>
+    <string name="mcp_enable_title">Увімкнути MCP-сервер</string>
+    <string name="mcp_enable_dialog_title">Увімкнути MCP-сервер?</string>
+    <string name="mcp_enable_dialog_message">Ваші ліки та нагадування будуть доступні за URL конектора кожному, хто його має. Вмикайте, лише якщо ви налаштували власний тунель і довіряєте ШІ-асистенту, якого підключаєте.</string>
+    <string name="mcp_enable_dialog_confirm">Увімкнути</string>
+    <string name="mcp_public_url_title">Публічна адреса тунелю</string>
+    <string name="mcp_public_url_invalid">Введіть https-адресу, наприклад https://meds.example.com</string>
+    <string name="mcp_port_title">Локальний порт</string>
+    <string name="mcp_port_invalid">Введіть порт від 1024 до 65535</string>
+    <string name="mcp_copy_url_title">Копіювати URL конектора</string>
+    <string name="mcp_copy_url_summary">Вставте його в Claude: Customize, Connectors, Add custom connector</string>
+    <string name="mcp_copy_url_needs_tunnel">Спершу введіть публічну адресу тунелю</string>
+    <string name="mcp_copy_local_url_title">Копіювати локальний URL</string>
+    <string name="mcp_copy_local_url_summary">Для перевірки на цьому телефоні або через adb forward</string>
+    <string name="mcp_copy_label">URL MCP MedTimer</string>
+    <string name="mcp_url_copied">Скопійовано</string>
+    <string name="mcp_regenerate_title">Створити новий секрет</string>
+    <string name="mcp_regenerate_summary">Поточний URL конектора перестане працювати</string>
+    <string name="mcp_regenerate_dialog_title">Створити новий секрет?</string>
+    <string name="mcp_regenerate_dialog_message">Поточний URL конектора одразу перестане працювати. Конектор у Claude доведеться оновити.</string>
+    <string name="mcp_regenerate_dialog_confirm">Створити</string>
+</resources>

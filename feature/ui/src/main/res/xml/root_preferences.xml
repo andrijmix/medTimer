@@ -25,4 +25,9 @@
         app:key="weekend_mode"
         app:summary="@string/weekend_mode_summary"
         app:title="@string/weekend_mode" />
+    <Preference
+        app:icon="@drawable/link"
+        app:key="mcp_server"
+        app:summary="@string/mcp_settings_summary"
+        app:title="@string/mcp_settings_title" />
 </PreferenceScreen>

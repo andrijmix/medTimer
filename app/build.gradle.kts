@@ -142,6 +142,7 @@ dependencies {
     implementation(project(":core:location"))
     implementation(project(":feature:reminders"))
     implementation(project(":feature:ui"))
+    implementation(project(":feature:mcp"))
     // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
@@ -292,7 +293,8 @@ val coverageModules = mapOf(
     project(":core:location") to "fullDebug",
     project(":feature:reminders:api") to "debug",
     project(":feature:reminders") to "fullDebug",
-    project(":feature:ui") to "fullDebug"
+    project(":feature:ui") to "fullDebug",
+    project(":feature:mcp") to "debug"
 )
 
 // Register a JacocoReport task for code coverage analysis

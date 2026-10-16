@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- The keys below are the keys of McpSettingsDataSource: this screen reads and writes the same preferences file. -->
+    <Preference
+        android:key="mcp_warning"
+        android:selectable="false"
+        android:summary="@string/mcp_warning"
+        app:icon="@drawable/shield_lock"
+        app:singleLineTitle="false" />
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="mcp_enabled"
+        android:title="@string/mcp_enable_title"
+        app:singleLineTitle="false" />
+    <EditTextPreference
+        android:key="mcp_public_base_url"
+        android:title="@string/mcp_public_url_title"
+        app:singleLineTitle="false"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:defaultValue="8765"
+        android:key="mcp_port"
+        android:title="@string/mcp_port_title"
+        app:singleLineTitle="false"
+        app:useSimpleSummaryProvider="true" />
+    <Preference
+        android:key="mcp_copy_url"
+        android:summary="@string/mcp_copy_url_summary"
+        android:title="@string/mcp_copy_url_title"
+        app:singleLineTitle="false" />
+    <Preference
+        android:key="mcp_copy_local_url"
+        android:summary="@string/mcp_copy_local_url_summary"
+        android:title="@string/mcp_copy_local_url_title"
+        app:singleLineTitle="false" />
+    <Preference
+        android:key="mcp_regenerate_secret"
+        android:summary="@string/mcp_regenerate_summary"
+        android:title="@string/mcp_regenerate_title"
+        app:singleLineTitle="false" />
+</androidx.preference.PreferenceScreen>

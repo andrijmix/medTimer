@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Strings of the optional MCP server feature. Lint rule MissingTranslation is ignored for this file only: the feature is an opt-in addition
+    of this fork, and the other locales fall back to English until they are translated (Ukrainian is provided). Remove the tools:ignore once
+    Weblate has translations for all locales.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- Foreground service notification -->
+    <string name="mcp_notification_channel_name">MCP server</string>
+    <string name="mcp_notification_title">MCP server is running</string>
+    <string name="mcp_notification_text">Listening on 127.0.0.1:%1$d</string>
+    <string name="mcp_notification_stop">Stop</string>
+    <string name="mcp_error_port_in_use">Could not open port %1$d. Is it already in use?</string>
+    <string name="mcp_error_invalid_settings">The MCP server settings are invalid.</string>
+
+    <!-- Settings screen -->
+    <string name="mcp_settings_title">MCP server</string>
+    <string name="mcp_settings_summary">Let an AI assistant read and change your medicines</string>
+    <string name="mcp_warning">When enabled, anyone who knows the connector URL can read and change your medicines. Data you ask the assistant for is processed by Anthropic and passes through your tunnel provider. Create a new secret if the URL leaks.</string>
+    <string name="mcp_enable_title">Enable MCP server</string>
+    <string name="mcp_enable_dialog_title">Enable MCP server?</string>
+    <string name="mcp_enable_dialog_message">Your medicines and reminders will be reachable through the connector URL by anyone who has it. Only enable this if you run your own tunnel and trust the AI assistant you connect.</string>
+    <string name="mcp_enable_dialog_confirm">Enable</string>
+    <string name="mcp_public_url_title">Public tunnel address</string>
+    <string name="mcp_public_url_invalid">Enter an https address, for example https://meds.example.com</string>
+    <string name="mcp_port_title">Local port</string>
+    <string name="mcp_port_invalid">Enter a port from 1024 to 65535</string>
+    <string name="mcp_copy_url_title">Copy connector URL</string>
+    <string name="mcp_copy_url_summary">Paste it in Claude under Customize, Connectors, Add custom connector</string>
+    <string name="mcp_copy_url_needs_tunnel">Enter the public tunnel address first</string>
+    <string name="mcp_copy_local_url_title">Copy local URL</string>
+    <string name="mcp_copy_local_url_summary">For testing on this phone or through adb forward</string>
+    <string name="mcp_copy_label">MedTimer MCP URL</string>
+    <string name="mcp_url_copied">Copied</string>
+    <string name="mcp_regenerate_title">Create new secret</string>
+    <string name="mcp_regenerate_summary">The current connector URL stops working</string>
+    <string name="mcp_regenerate_dialog_title">Create new secret?</string>
+    <string name="mcp_regenerate_dialog_message">The current connector URL stops working immediately. You have to update the connector in Claude.</string>
+    <string name="mcp_regenerate_dialog_confirm">Create</string>
+</resources>

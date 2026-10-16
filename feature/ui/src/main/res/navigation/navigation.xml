@@ -36,7 +36,14 @@
         <action
             android:id="@+id/action_preferencesFragment_to_snoozeSettingsFragment"
             app:destination="@id/snoozeSettingsFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_mcpSettingsFragment"
+            app:destination="@id/mcpSettingsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mcpSettingsFragment"
+        android:name="com.futsch1.medtimer.feature.ui.preferences.McpSettingsFragment"
+        android:label="@string/mcp_settings_title" />
     <fragment
         android:id="@+id/weekendModePreferencesFragment"
         android:name="com.futsch1.medtimer.feature.ui.preferences.WeekendModePreferencesFragment"

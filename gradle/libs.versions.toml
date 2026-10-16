@@ -53,6 +53,11 @@ documentfile = "1.1.0"
 # Coroutines
 kotlinx-coroutines = "1.11.0"
 
+# In-app MCP server (:feature:mcp). ktor must match the version the MCP SDK's POM depends on.
+mcp-kotlin-sdk = "0.15.0"
+ktor = "3.5.1"
+kotlinx-serialization = "1.11.0"
+
 # Compose
 compose-bom = "2026.09.00"
 # material3 is hand-pinned to the 1.5.0-alpha line (overriding the BOM) because MaterialExpressiveTheme
@@ -82,6 +87,7 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 androidx-biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
+androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle-ktx" }
 
 # UI / Third-party
 material = { module = "com.google.android.material:material", version.ref = "material" }
@@ -124,6 +130,12 @@ androidx-documentfile = { group = "androidx.documentfile", name = "documentfile"
 # Coroutines
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+# MCP server
+mcp-kotlin-sdk-server = { module = "io.modelcontextprotocol:kotlin-sdk-server", version.ref = "mcp-kotlin-sdk" }
+ktor-server-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # Compose (versions managed by the BOM unless an explicit version.ref is given)
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }

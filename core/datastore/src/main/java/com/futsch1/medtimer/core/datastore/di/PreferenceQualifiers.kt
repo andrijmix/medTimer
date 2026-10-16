@@ -9,3 +9,7 @@ annotation class DefaultPreferences
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class MedTimerPreferences
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class McpPreferences

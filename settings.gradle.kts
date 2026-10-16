@@ -34,4 +34,5 @@ include(":core:location")
 include(":feature:reminders")
 include(":feature:reminders:api")
 include(":feature:ui")
+include(":feature:mcp")
  

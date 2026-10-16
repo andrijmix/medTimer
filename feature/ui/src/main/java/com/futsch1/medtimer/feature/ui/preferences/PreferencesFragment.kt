@@ -60,6 +60,11 @@ open class PreferencesFragment : MedTimerPreferenceFragment() {
             "snooze_settings",
             R.id.action_preferencesFragment_to_snoozeSettingsFragment
         )
+        setupPreferencesLink(
+            this,
+            "mcp_server",
+            R.id.action_preferencesFragment_to_mcpSettingsFragment
+        )
     }
 
     private fun setupTheme() {
