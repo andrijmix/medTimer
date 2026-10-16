@@ -48,6 +48,7 @@ graph LR
     app[":app"]
     fui[":feature:ui"]
     fr[":feature:reminders"]
+    fm[":feature:mcp"]
     cui[":core:ui"]
     cds[":core:datastore"]
     cdb[":core:database"]
@@ -55,6 +56,7 @@ graph LR
     cd[":core:domain"]
     app --> fui
     app --> fr
+    app --> fm
     app --> cdb
     app --> cui
     app --> cds
@@ -65,6 +67,9 @@ graph LR
     fr --> cui
     fr --> cds
     fr --> cc
+    fm --> cui
+    fm --> cds
+    fm --> cc
     cui --> cds
     cui --> cc
     cds --> cc
@@ -82,7 +87,8 @@ graph LR
   implementations into Hilt at the binding site.
   This is what enforces the no-entity-leakage rule below.
 - **Feature → feature dependencies are rare and one-directional.**
-  Today only `:feature:ui` → `:feature:reminders` exists (the overview consumes reminder scheduling components).
+  Today there are two: `:feature:ui` → `:feature:reminders` (the overview consumes reminder scheduling components) and
+  `:feature:mcp` → `:feature:reminders:api` (the MCP tools schedule reminders and simulate upcoming doses; it never sees the implementation module).
   Before adding another, consider whether the shared code belongs in a `:core:*` module instead — feature-to-feature edges multiply quickly and turn into
   cycles.
 
@@ -148,6 +154,7 @@ The current layout:
 | `:core:ui`           | Shared **resources** (strings, drawables, themes, navigation graphs, XML layouts that cross features). Compose theme (`MedTimerTheme`) and reusable composables (`SortableTable`, `TagEventFilter`, `@MedTimerPreview`) live here — see [jetpack-compose.md](jetpack-compose.md). |
 | `:feature:reminders` | Reminder scheduling, notification processing                                                                                                                                                                                                                                      |
 | `:feature:ui`        | Overview UI                                                                                                                                                                                                                                                                       |
+| `:feature:mcp`       | Optional in-app MCP server (off by default): embedded Ktor server, foreground service, tools. Depends on `:feature:reminders:api`, not on the other features. See [`mcp-server.md`](../mcp-server.md)                                                                            |
 
 ### When to add a new module
 

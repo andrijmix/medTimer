@@ -39,6 +39,7 @@ core/datastore/       DataStore preferences
 core/ui/              Shared resources (strings, drawables, themes, navigation graphs); Compose theme will live here too
 feature/reminders/    Reminder scheduling, notification processing
 feature/ui/           Overview UI
+feature/mcp/          Optional in-app MCP server for AI assistants, off by default (see docs/mcp-server.md; phone set-up in docs/mcp-phone-setup.md)
 app/schemas/          Room database migration schemas
 ```
 
